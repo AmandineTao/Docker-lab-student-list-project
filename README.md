@@ -168,8 +168,8 @@ POZOS need you to set up et complete CI/CD chain using Jenkins.
 So you need to install Jenkins by using [this](https://raw.githubusercontent.com/eazytrainingfr/jenkins-training/master/docker-compose.yml "this") docker-compose file, and create a Pipeline Job,which will do all these steps : 
 - Cloning your git repository (which is supposed to contain your Dockerfile)
 - Build your Image from Dockerfile
-- launch and test  a container from image builded
-- Push Image on your private registry
+- launch and test  both container, one from image builded, the second is the web IHM container as previously
+- Push the image on your private registry
 - Delete container launched if everything is good
 
 ## Delivery (4 points)
