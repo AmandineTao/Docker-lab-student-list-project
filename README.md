@@ -76,7 +76,7 @@ Now it is time to explain you each file's role:
 
 
 
-## Build and test (7 points)
+## Build and test (4 points)
 
 POZOS will give you information to build the API container
 
@@ -162,6 +162,18 @@ Or you can use [Portus](http://port.us.org/ "Portus") to run both
 
 Don't forget to push your image on your private registry and show them in your delivery.
 
+## CI/CD (3 points)
+POZOS need you to set up et complete CI/CD chain using Jenkins.
+
+So you need to : 
+- Install Jenkins by using [this](https://raw.githubusercontent.com/eazytrainingfr/jenkins-training/master/docker-compose.yml "this") docker-compose file
+- Create a Pipeline Job,which will do all these steps  
+- cloning your git repository (which contain your Dockerfile)
+- Build your Image from Dockerfile
+- launch and test  a container from image builded
+- Push Image on dockerhub registryy
+- Delete container launched if everything is good
+
 ## Delivery (4 points)
 
 Your delivery must be zip named firstname.zip (replace firstname by your own) that contain:
@@ -175,6 +187,6 @@ Your delivery will be evaluated on:
 - Screenshots quality (relevance, visibility)
 - Presentation quality
 
-Send your delivery at ***eazytrainingfr@gmail.com*** and we will provide you the link of the solution.
+Send your delivery at ***monji.ulrich@gmail.com*** and we will provide you the link of the solution.
 
 ![good luck](https://user-images.githubusercontent.com/18481009/84582398-cad38100-adeb-11ea-95e3-2a9d4c0d5437.gif)
