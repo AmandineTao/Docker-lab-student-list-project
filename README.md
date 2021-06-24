@@ -169,7 +169,7 @@ So you need to install Jenkins by using [this](https://raw.githubusercontent.com
 - Cloning your git repository (which is supposed to contain your Dockerfile)
 - Build your Image from Dockerfile
 - launch and test  a container from image builded
-- Push Image on dockerhub registry
+- Push Image on your private registry
 - Delete container launched if everything is good
 
 ## Delivery (4 points)
