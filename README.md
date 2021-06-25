@@ -61,7 +61,7 @@ student_list has two modules:
 
 Your work is to build one container for each module an make them interact with each other
 
-Application source code can be found [here](https://github.com/diranetafen/student-list.git "here")
+Application source code can be found [here](https://github.com/choco1992/student-list.git "here")
 
 The files that you must provide (in your delivery) are ***Dockerfile*** and ***docker-compose.yml***  (currently both are empty)
 
