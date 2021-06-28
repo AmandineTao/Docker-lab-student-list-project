@@ -156,7 +156,9 @@ POZOS need you to deploy a private registry and store the built images
 So you need to deploy :
 
 - a docker [registry](https://docs.docker.com/registry/ "registry")
-- a web [interface](https://hub.docker.com/r/joxit/docker-registry-ui/ "interface") to see the pushed image as a container
+- a web [interface](https://hub.docker.com/r/joxit/docker-registry-ui/ "interface") to see the pushed image as a container. 
+- Tye command to lauch UI regisry lokks like : docker run --name ${your-suitatable-name} -d --network $NETWORK -p ${your_port}:80 -e REGISTRY_HTTP_HEADERS_Access-Control-Allow-Origin="*" -e REGISTRY_URL=http://${hostname_of_registry_container}:5000 -e DELETE_IMAGES=true -e REGISTRY_TITLE="EXAMS REGISTRY" joxit/docker-registry-ui:static
+
 
 Or you can use [Portus](http://port.us.org/ "Portus") to run both
 
