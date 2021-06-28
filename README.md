@@ -123,7 +123,7 @@ Run this command to make sure that the API correctly responding (take a screensh
 
 **Congratulation! Now you are ready for the next step (docker-compose.yml)**
 
-## Infrastructure As Code (5 points)
+## Infrastructure As Code (4 points)
 
 After testing your API image, you need to put all together and deploy it, using docker-compose.
 
@@ -149,7 +149,7 @@ Finally, reach your website and click on the bouton "List Student"
 
 **If the list of the student appears, you are successfully dockerizing the POZOS application! Congratulation (make a screenshot)**
 
-## Docker Registry (4 points)
+## Docker Registry (3 points)
 
 POZOS need you to deploy a private registry and store the built images
 
@@ -164,7 +164,7 @@ Or you can use [Portus](http://port.us.org/ "Portus") to run both
 
 Don't forget to push your image on your private registry and show them in your delivery.
 
-## CI/CD (3 points)
+## CI/CD (6 points)
 POZOS need you to set up et complete CI/CD chain using Jenkins.
 
 So you need to install Jenkins by using [this](https://raw.githubusercontent.com/eazytrainingfr/jenkins-training/master/docker-compose.yml "this") docker-compose file, and create a Pipeline Job,which will do all these steps : 
@@ -174,7 +174,7 @@ So you need to install Jenkins by using [this](https://raw.githubusercontent.com
 - Push the image on your private registry
 - Delete container launched if everything is good
 
-## Delivery (4 points)
+## Delivery (3 points)
 
 Your delivery must be zip named firstname.zip (replace firstname by your own) that contain:
 
