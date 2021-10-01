@@ -156,23 +156,14 @@ POZOS need you to deploy a private registry and store the built images
 So you need to deploy :
 
 - a docker [registry](https://docs.docker.com/registry/ "registry")
-- a web [interface](https://hub.docker.com/r/joxit/docker-registry-ui/ "interface") to see the pushed image as a container. 
-- The command to lauch UI regisry lokks like : docker run --name ${your-suitatable-name} -d --network $NETWORK -p ${your_port}:80 -e REGISTRY_URL=http://${hostname_of_registry_container}:5000 -e DELETE_IMAGES=true -e REGISTRY_TITLE="EXAMS REGISTRY" joxit/docker-registry-ui:static
+- a web [interface](https://hub.docker.com/r/joxit/docker-registry-ui/ "interface") to see the pushed image as a container. you mut use joxit/docker-registry-ui:static
+
 
 
 Or you can use [Portus](http://port.us.org/ "Portus") to run both
 
 Don't forget to push your image on your private registry and show them in your delivery.
 
-## CI/CD (6 points)
-POZOS need you to set up et complete CI/CD chain using Jenkins.
-
-So you need to install Jenkins by using [this](https://raw.githubusercontent.com/eazytrainingfr/jenkins-training/master/docker-compose.yml "this") docker-compose file, and create a Pipeline Job,which will do all these steps : 
-- Cloning your git repository (which is supposed to contain your Dockerfile)
-- Build your Image from Dockerfile
-- launch and test  both container, one from image builded, the second is the web IHM container as previously
-- Push the image on your private registry
-- Delete container launched if everything is good
 
 ## Delivery (3 points)
 
