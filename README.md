@@ -76,7 +76,7 @@ Now it is time to explain you each file's role:
 
 
 
-## Build and test (4 points)
+## Build and test (6 points)
 
 POZOS will give you information to build the API container
 
@@ -123,7 +123,7 @@ Run this command to make sure that the API correctly responding (take a screensh
 
 **Congratulation! Now you are ready for the next step (docker-compose.yml)**
 
-## Infrastructure As Code (4 points)
+## Infrastructure As Code (6 points)
 
 After testing your API image, you need to put all together and deploy it, using docker-compose.
 
@@ -149,14 +149,14 @@ Finally, reach your website and click on the bouton "List Student"
 
 **If the list of the student appears, you are successfully dockerizing the POZOS application! Congratulation (make a screenshot)**
 
-## Docker Registry (3 points)
+## Docker Registry (4 points)
 
 POZOS need you to deploy a private registry and store the built images
 
 So you need to deploy :
 
 - a docker [registry](https://docs.docker.com/registry/ "registry")
-- a web [interface](https://hub.docker.com/r/joxit/docker-registry-ui/ "interface") to see the pushed image as a container. you mut use joxit/docker-registry-ui:static
+- a web [interface](https://hub.docker.com/r/joxit/docker-registry-ui/ "interface") to see the pushed image as a container. you mut use ***joxit/docker-registry-ui:static***
 
 
 
@@ -165,7 +165,7 @@ Or you can use [Portus](http://port.us.org/ "Portus") to run both
 Don't forget to push your image on your private registry and show them in your delivery.
 
 
-## Delivery (3 points)
+## Delivery (4 points)
 
 Your delivery must be zip named firstname.zip (replace firstname by your own) that contain:
 
