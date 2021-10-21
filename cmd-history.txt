@@ -1,0 +1,199 @@
+curl -fsSL https://get.docker.com -o get-docker.sh
+    2  sh get-docker.sh
+    3  sudo systemctl start docker
+    4  docker ps -a
+    5  sudo usermod -aG docker vagrant
+    6  sudo systemctl start docker
+    7  sudo systemctl status docker
+    8  sudo systemctl enable docker
+    9  logout
+   10  docker run hello-world:latest
+   11  docker ps -a
+   12  docker run -d --name nginx -p 80:80 nginx
+   13  docker ps
+   14  docker ps -a
+   15  docker run --name nginx -d -p 80:80 nginx
+   16  docker images
+   17  docker ps
+   18  docker ps -a
+   19  docker run --help
+   20  docker run -t --name nginx -d -p 80:80 nginx
+   21  docker run --name nginx -d -p 80:80 -it nginx
+   22  docker run -it --rm -d -p 8080:80 --name nginx nginx
+   23  docker images
+   24  docker run -it --rm -d -p 8080:80 --name web nginx
+   25  docker run --name web-color -e APP_COLOR="red" -d -p 8080:8080 kodekloud/webapp-color
+   26  mkdir lab2
+   27  cd lab2
+   28  git clone https://github.com/diranetafen/static-website-example.git
+   29  yum install git
+   30  sudo yum install git
+   31  git clone https://github.com/diranetafen/static-website-example.git
+   32  sudo sytemctl status docker
+   33  sudo systemctl start docker
+   34  sudo systemctl status docker
+   35  docker run -it --rm -d -p 8080:80 --name web nginx
+   36  cd ..
+   37  mkdir lab1
+   38  cd lab1
+   39  docker run -it --name nginx -d -p 80:80 nginx
+   40  docker images
+   41  docker ps -a
+   42  ip a
+   43  docker run -it --name nginx_2 -d -p 8000:80 nginx
+   44  docker exec -it nginx bash
+   45  docker run --name web-color -e APP_COLOR="red" -d -p 8080:8080 kodekloud/webapp-color
+   46  sudo systemctl start docker
+   47  sudo systemctl enable docker
+   48  sudo systemctl status docker
+   49  docker run --name web-color -e APP_COLOR="red" -d -p 8080:8080 kodekloud/webapp-color
+   50  sudo systemctl start docker
+   51  docker run --name web-color -e APP_COLOR="red" -d -p 8080:8080 kodekloud/webapp-color
+   52  sudo systemctl start docker
+   53  sudo systemctl enable docker
+   54  history
+   55  logout
+   56  sudo systemctl status docker
+   57  docker run --name web-color -e APP_COLOR="red" -d -p 8080:8080 kodekloud/webapp-color
+   58  cd lab2
+   59  ls
+   60  cd static-website-example/
+   61  ls
+   62  docker build -t static-webapp:v1 .
+   63  vi Dockerfile
+   64  docker build -t static-webapp:v1 .
+   65  cd ..
+   66  ls
+   67  cp static-website-example/Dockerfile .
+   68  ls
+   69  docker build -t static-webapp:v1 .
+   70  docker images
+   71  docker run --name static-webapp -d -p 80:80 static-webapp:v1
+   72  docker run --name static-webapp -d -p 81:80 static-webapp:v1
+   73  docker stop static-webapp
+   74  docker rm static-webapp
+   75  docker ps -a
+   76  docker ps
+   77  docker run --name static-webapp -d -p 81:80 static-webapp:v1
+   78  docker ps -a
+   79  docker login
+   80  docker images
+   81  docker tag 446a5b424274 matao39/static-webapp:v1
+   82  docker push matao39/static-webapp:v1
+   83  vi Dockerfile
+   84  mkdir part3
+   85  cd part3
+   86  vi Dockerfile
+   87  ls
+   88  cat Dockerfile
+   89  docker build -t static-webapp:v2 .
+   90  docker run --name static-webapp2 -p 82:80 -d static-webapp:v2
+   91  ls
+   92  cd ..
+   93  ls
+   94  rm -Rf static-website-example
+   95  ls
+   96  git init
+   97  cat Dockerfile
+   98  git add README.md Dockerfile
+   99  vi README.md
+  100  git add README.md Dockerfile
+  101  git commit -m "initialise git"
+  102  git config --global user.email "tao.amandine@gmail.com"
+  103  git config --global user.name "amandine"
+  104  git commit -m "initialise git"
+  105  git remote add origin https://github.com/AmandineTao/Docker-lab-build-and-push.git
+  106  git push -u origin master
+  107  logout
+  108  history
+  109  logout
+  110  ls
+  111  sudo systemctl status docker
+  112  ls
+  113  cd lab2
+  114  ls
+  115  docker ps
+  116  docker ps -a
+  117  docker login
+  118  docker images
+  119  docker tag 7a7fef48efe9 matao39/static-webapp:v2
+  120  docker push matao39/static-webapp:v2
+  121  vi Dockerfile
+  122  docker build --help
+  123  docker build -t matao39/static-webapp:v3 .
+  124  docker images
+  125  docker push matao39/static-webapp:v3
+  126  cd ..
+  127  mkdir lab6
+  128  cd lab6
+  129  mkdir part3-mario
+  130  cd part3-mario
+  131  vi docker-compose.yml
+  132  docker-compose --version
+  133  sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+  134  sudo chmod +x /usr/local/bin/docker-compose
+  135  docker-compose --version
+  136  docker-compose up -d
+  137  cd ..
+  138  ls
+  139  mkdir mini-projet
+  140  cd mini-projet/
+  141  git clone https://github.com/choco1992/student-list.git
+  142  ls
+  143  cd student-list/
+  144  ls
+  145  cd simple_api/
+  146  ls
+  147  vi Dockerfile
+  148  docker -t matao39/studentlist-webapp-api:v1 .
+  149  docker build -t matao39/studentlist-webapp-api:v1 .
+  150  vi Dockerfile
+  151  docker build -t matao39/studentlist-webapp-api:v1 .
+  152  docker images
+  153  docker run --help
+  154  docker images
+  155  docker run -t --name studentlist-webapp-api -d -p 5001:5000 -v "${PWD}/student_age.json:/data/student_age.json" matao39/studentlist-webapp-api:v1
+  156  docker ps -a
+  157  docker run -t --name studentlist-webapp-api -d -p 5001:5000 -v "${PWD}/student_age.json:/data/student_age.json" matao39/studentlist-webapp-api:v1curl -u toto:python -X GET http://192.168.99.10:5001/pozos/api/v1.0/get_student_ages
+  158  curl -u toto:python -X GET http://192.168.99.10:5001/pozos/api/v1.0/get_student_ages
+  159  cd ..
+  160  ls
+  161  vi docker-compose.yml
+  162  rm docker-compose.yml
+  163  vi docker-compose.yml
+  164  docker images
+  165  vi docker-compose.yml
+  166  ls
+  167  vi website/index.php
+  168  ls
+  169  docker-compose up -d
+  170  docker login
+  171  docker push matao39/studentlist-webapp-api
+  172  docker push matao39/studentlist-webapp-api:v1
+  173  docker-compose up -d
+  174  vi docker-compose.yml
+  175  ls
+  176  docker-compose up -d
+  177  curl -u toto:python -X GET http://192.168.99.10:8081/pozos/api/v1.0/get_student_ages
+  178  curl -u toto:python -X GET http://192.168.99.10:8082/pozos/api/v1.0/get_student_ages
+  179  curl -u toto:python -X GET http://192.168.99.10:8082/pozos/web/v1.0/get_student_ages
+  180  docker-compose ps
+  181  curl http://192.168.99.10:8082
+  182  mkdir jenkins-lab
+  183  cd jenkins-lab
+  184  docker ps -a
+  185  docker ps
+  186  exit
+  187  docker ps
+  188  docker kill $(docker ps -q)
+  189  docker ps
+  190  docker ps -a
+  191  ls
+  192  mkdir jenkins-lab
+  193  cd jenkins-lab
+  194  vi docker-compose.yml
+  195  docker-compose up -d
+  196  docker-compose ps
+  197  curl http://192.168.99.10:8080
+  198  ls
+  199  history > cmd-history-docker-jenkins-lab.txt

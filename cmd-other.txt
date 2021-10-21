@@ -1,0 +1,22 @@
+Lancer le container : 
+docker run --name studentlist -d -p 8081:5000 -v "${PWD}/student_age.json:/data/student_age.json" choco1992/aforpstudentlist:latest
+Tester : 
+curl -u toto:python -X GET http://192.168.247.133:8081/pozos/api/v1.0/get_student_ages
+
+Lancer le registre privé : 
+docker run --network student-list_api_network -d -p 5000:5000 --name registry registry:2
+
+tager l'image pour que ca pointe sur votre registre : 
+docker image tag choco1992/aforpstudentlist localhost:5000/aforpstudentlist
+
+Pusher sur votre registre
+docker push localhost:5000/aforpstudentlist
+
+downloader sur votre registre : 
+docker pull localhost:5000/aforpstudentlist
+
+Lancer l'UI du registre: 
+docker run --name registry-ui -d --net student-list_api_network -p 4002:80 -e REGISTRY_URL=http://registry:5000 -e DELETE_IMAGES=true -e REGISTRY_TITLE="POZOS REGISTRY" joxit/docker-registry-ui:static
+
+index.php a editer non mentionné dans l'ennonce
+probleme lors du lancement du registre 
